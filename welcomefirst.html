@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MyJournal</title>
+    <link rel="stylesheet" href="assets/css/welcomefirst_styles.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="#" class="nav-logo">MyJournal</a>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="main-section">
+        <h1>Welcome to MyJournal</h1>
+        <form id="welcomeForm">
+            <div class="form-step" id="step1">
+                <label for="theme">Choose theme:</label>
+                <select id="theme" name="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+                <button type="button" onclick="nextStep()">Next</button>
+            </div>
+            <div class="form-step" id="step2" style="display:none;">
+                <label for="background">Choose background image:</label>
+                <div class="image-selection">
+                    <img src="assets/css/image_option/image1.jpg" alt="Image 1" onclick="selectImage('assets/css/image_option/image1.jpg')">
+                    <img src="assets/css/image_option/image2.jpg" alt="Image 2" onclick="selectImage('assets/css/image_option/image2.jpg')">
+                    <img src="assets/css/image_option/image3.jpg" alt="Image 3" onclick="selectImage('assets/css/image_option/image3.jpg')">
+                    <img src="assets/css/image_option/image4.jpg" alt="Image 4" onclick="selectImage('assets/css/image_option/image4.jpg')">
+                    <img src="assets/css/image_option/image1.jpg" alt="Image 5" onclick="selectImage('assets/css/image_option/image1.jpg')">
+                    <img src="assets/css/image_option/image2.jpg" alt="Image 6" onclick="selectImage('assets/css/image_option/image2.jpg')">
+                    <img src="assets/css/image_option/image3.jpg" alt="Image 7" onclick="selectImage('assets/css/image_option/image3.jpg')">
+                    <img src="assets/css/image_option/image4.jpg" alt="Image 8" onclick="selectImage('assets/css/image_option/image4.jpg')">
+                </div>
+                <input type="file" id="customBackground" name="background" accept="image/*" style="display:none;" onchange="selectImageFromFile(event)">
+                <label for="customBackground" class="upload-button">Upload your own image</label>
+                <button type="button" onclick="nextStep()">Next</button>
+            </div>
+            <div class="form-step" id="step3" style="display:none;">
+                <label for="username">What do we call you?</label>
+                <input type="text" id="username" name="username" required>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="assets/js/welcomefirst.js"></script>
+</body>
+</html>
