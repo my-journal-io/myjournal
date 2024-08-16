@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Back - MyJournal</title>
+    <link rel="stylesheet" href="assets/css/welcomeback_styles.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="#" class="nav-logo">MyJournal</a>
+        <div class="nav-links">
+            <a href="#">Profile</a>
+            <a href="#">Logout</a>
+        </div>
+    </div>
+    <div class="main-section">
+        <div class="welcome-message">
+            <h1>Welcome back, Niket</h1>
+        </div>
+        <div class="journal-container">
+            <div class="entries-column">
+                <h2>Previous Entries</h2>
+                <ul class="entries-list">
+                    <li><a href="#">Entry 1 - Date</a></li>
+                    <li><a href="#">Entry 2 - Date</a></li>
+                    <li><a href="#">Entry 3 - Date</a></li>
+                    <li><a href="#">Entry 4 - Date</a></li>
+                </ul>
+            </div>
+
+            <div class="entry-area">
+                <form id="journalEntryForm">
+                    <input type="text" id="entryTitle" name="entryTitle" placeholder="Title of your entry" required>
+                    <textarea id="entryContent" name="entryContent" placeholder="Write your journal entry here..." rows="15" required></textarea>
+                    <button type="submit">Submit Entry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
